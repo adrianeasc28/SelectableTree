@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8" />
+  <title>Web Component Selectable Tree Demo</title>
+</head>
+<script src="./selectable-tree.js"></script>
+
+<body>
+  <h1>Web Component Selectable Tree Demo</h1>
+  <div id="root">
+    <selectable-tree id="tree"></selectable-tree>
+  </div>
+  <script>
+    const data = [
+      {
+        "name": "Documents",
+        "id": "1",
+        "children": [
+          {
+            "name": "Projects",
+            "id": "2",
+            "children": [
+              {
+                "name": "Test 1",
+                "id": "3",
+                "children": [
+                  {
+                    "name": "Test 2",
+                    "id": "7",
+                    "children": [
+                    ]
+                  }]
+              },
+              {
+                "name": "Images",
+                "id": "4",
+                "children": []
+              },
+              {
+                "name": "Test 4",
+                "id": "9",
+                "children": [
+                  {
+                    "name": "Children Test 4",
+                    "id": "10",
+                    "children": []
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "name": "5",
+            "id": "5",
+            "children": []
+          }
+        ]
+      },
+      {
+        "name": "Desktop",
+        "id": "6",
+        "children": []
+      },
+      {
+        "name": "Downloads",
+        "id": "11",
+        "children": []
+      }
+    ];
+    const jsonData = JSON.stringify(data);
+    document.getElementById('tree').setAttribute('data', jsonData);
+  </script>
+</body>
+
+</html>
